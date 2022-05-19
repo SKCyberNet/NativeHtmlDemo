@@ -17,14 +17,16 @@
       var whei = $(window).width()
       $("html").css({ fontSize: whei / 20 })
     });
+    __cy.SetupListener('Demo',(event)=>{
+      console.log("event :",event);
+    });
     __cy.Connect("http://172.18.1.197:8081");
   });
 </script>
 <script type="text/javascript" src="js/echarts.min.js"></script>
 <script language="JavaScript" src="js/js.js"></script>
 
-<body oncontextmenu="return false"> 
-  </div>
+<body oncontextmenu="return false">  
   <div id="playerUI" style="position: absolute; left:0;top:0; z-index: -1;">
     <div id="player"></div>
   </div>
