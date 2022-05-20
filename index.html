@@ -21,15 +21,13 @@
     });
 
 
-    $("#DemoBtn").click(function () {
-      console.log("Click Btn");
+    $("#DemoBtn").click(function () { 
       __cy.SendRequest("UpdatePOIs", poi_request, (result) => {
         console.log("Request Result : ", result);
       });
     })
 
-    $("#DemoBtn2").click(function () {
-      console.log("Click Btn");
+    $("#DemoBtn2").click(function () { 
       __cy.SendRequest("DeleteAllPOIs", {}, (result) => {
         console.log("Request Result : ", result);
       });
