@@ -283,7 +283,8 @@ a:hover {
 	/* background: rgba(101, 132, 226, .5); */
 	background: rgba(11, 47, 101, 0);
 	padding: .15rem;
-	display: block;
+	display: flex;
+	pointer-events: fill;
 }
 
 .barbox li,
