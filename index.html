@@ -28,12 +28,9 @@
     })
 
     $("#DemoBtn2").click(function () {
-      // __cy.SendRequest("DeleteAllPOIs", {}, (result) => {
-      //   console.log("Request Result : ", result);
-      // });
-      __cy.poi.DeleteAllPOIs({}, (result) => {
+      __cy.SendRequest("DeleteAllPOIs", {}, (result) => {
         console.log("Request Result : ", result);
-      })
+      }); 
     })
 
     __cy.SetupListener('Demo', (event) => {
