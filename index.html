@@ -6,7 +6,7 @@
   <title>index</title>
   <script type="text/javascript" src="js/jquery.js"></script>
   <script type="text/javascript" src="js/pois.js"></script>
-  <script type="text/javascript" src="http://172.18.1.197:8081/sdk/cyber-sdk.js"></script>
+  <script type="text/javascript" src="http://xxxxxx:pppp/sdk/cyber-sdk.js"></script>
   <link rel="stylesheet" href="css/comon0.css">
   <link rel="stylesheet" href="css/btn.css">
 </head>
@@ -21,23 +21,26 @@
     });
 
 
-    $("#DemoBtn").click(function () { 
+    $("#DemoBtn").click(function () {
       __cy.SendRequest("UpdatePOIs", poi_request, (result) => {
         console.log("Request Result : ", result);
       });
     })
 
-    $("#DemoBtn2").click(function () { 
-      __cy.SendRequest("DeleteAllPOIs", {}, (result) => {
+    $("#DemoBtn2").click(function () {
+      // __cy.SendRequest("DeleteAllPOIs", {}, (result) => {
+      //   console.log("Request Result : ", result);
+      // });
+      __cy.poi.DeleteAllPOIs({}, (result) => {
         console.log("Request Result : ", result);
-      });
+      })
     })
 
     __cy.SetupListener('Demo', (event) => {
       console.log("event :", event);
     });
 
-    __cy.Connect("http://172.18.1.197:8081");
+    __cy.Connect("http://xxxxxx:pppp");
 
   });
 </script>
