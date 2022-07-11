@@ -6,8 +6,8 @@
   <title>index</title>
   <script type="text/javascript" src="js/jquery.js"></script>
   <script type="text/javascript" src="js/pois.js"></script>
-  <script type="text/javascript" src="http://xxxxxx:pppp/sdk/cyber-sdk.js"></script>
-  <link rel="stylesheet" href="css/comon0.css">
+  <script type="text/javascript" src="http://xxxxxx:pppp/sdk/cyber-sdk.js"></script> 
+  <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/btn.css">
 </head>
 <script>
@@ -30,7 +30,7 @@
     $("#DemoBtn2").click(function () {
       __cy.SendRequest("DeleteAllPOIs", {}, (result) => {
         console.log("Request Result : ", result);
-      }); 
+      });
     })
 
     __cy.SetupListener('Demo', (event) => {
@@ -45,7 +45,7 @@
 <script language="JavaScript" src="js/js.js"></script>
 
 <body oncontextmenu="return false">
-  <div id="playerUI" style="position: absolute; left:0;top:0; z-index: -1;">
+  <div id="playerUI" style="position: absolute; left:0;top:0; z-index: -1;  height: 100vh; width: 100vw;">
     <div id="player"></div>
   </div>
   <div class="head">
